@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plasma Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: url('https://timmhboy.github.io/v/Plasma-Background.gif') center center fixed; /* Set background to the provided GIF */
+            background-size: cover;
+            color: #fff; /* Set text color to white */
+        }
+        #bigTitle {
+            text-align: center;
+            font-size: 3em;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black background for better visibility */
+        }
+        #fullscreenButton {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 1.5em;
+        }
+        #madeBy {
+            text-align: center;
+            font-size: 1em;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black background for better visibility */
+        }
+        #plasmaImage {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%; /* Ensure the image doesn't exceed its natural size */
+        }
+    </style>
+</head>
+<body>
+    <div id="bigTitle">PLASMA</div>
+    <button id="fullscreenButton" onclick="loadNewWebsite()">Load Different Website</button>
+    <img id="plasmaImage" src="https://timmhboy.github.io/v/R.gif">
+    <div id="madeBy">Made By - <a href="https://sites.google.com/view/echosgames/" target="_blank">Echos Games</a></div>
+
+    <script>
+        function loadNewWebsite() {
+            // Execute the provided JavaScript code
+            var url = prompt('What site do you want to replace this page with?');
+            var prefix = 'https://';
+            if (url && url.substr(0, prefix.length) !== prefix) {
+                url = prefix + url;
+            }
+
+            // Replace the current page with the new website
+            if (url) {
+                window.location.href = url;
+            }
+        }
+    </script>
+</body>
+</html>
